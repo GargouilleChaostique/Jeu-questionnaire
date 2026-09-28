@@ -1,6 +1,6 @@
 import {Joueur} from './Joueur.js';
 
-
+// donc si player ont un score de plus que 2 un gagne vvv
 const DIFFERENCE_DE_SCORE_POUR_GAGNER = 2;
 
 /**
@@ -23,6 +23,8 @@ export class Quiz {
     #estTermine = false;
     #surChangement;
 
+
+    // VVVVVVVVVVV problememe detecter sur les affaire du prof???
     /**
      * @param {Question[]} questions - Liste des questions du quiz
      * @param {Function} surChangement - Callback déclenché à chaque mise à jour
