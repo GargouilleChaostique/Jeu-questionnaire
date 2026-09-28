@@ -39,6 +39,9 @@ export class Quiz {
     }
 
     // ---------- Getters ----------
+
+
+    // #TODO s assurer que tout est pris , si le prof les a mis la c est pour que tu les utilise!
     get questions() {
         return this.#questions;
     }
@@ -136,6 +139,8 @@ export class Quiz {
      * Termine le quiz si on était à la dernière question.
      */
     suivant() {
+
+     // no way c est ca ==>   this.questionActuelle = next.questions();
 
     }
 
