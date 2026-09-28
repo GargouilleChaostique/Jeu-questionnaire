@@ -4,9 +4,9 @@
  */
 class Joueur {
      constructor() {
-         this.payerAroB = false ; // est-ce ton tour
-         this.nomJoueur = ""; // ton nom
-         this.pointJoueur = 0; // tes points
+      //   this.payerAroB = false ; // est-ce ton tour # NE SERAIS PAS NECESAIRE
+         this.nomJoueur = ""; // ton nom recoit un parametre en chaine de charatere  #TODO Dois etre > get <
+         this.scoreJoueur = 0; // tes points  #TODO Dois etre > get <
      }
 
 
@@ -19,7 +19,15 @@ class Joueur {
     comparerA(autre) {
 
 
-
-
     }
+// ajouteur de point a joueur ...???? c est pas juste un get++ ???? #TODO chercher le piege
+    ajouterPoint(){
+        this.scoreJoueur ++;
+    }
+
+// cela ne peu pas etre aussi facile que ca??? #TODO chercher le piege
+    reinitialiser(){
+        this.scoreJoueur = 0 ;
+    }
+
 }
