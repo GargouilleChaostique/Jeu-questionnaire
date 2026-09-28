@@ -1,8 +1,14 @@
+
+
 /**
  * Classe Question
  * Représente une question de quiz avec ses options et la bonne réponse.
  */
-class Question {
+
+
+
+
+ class Question {
 
     /**
      * @param {Object} data - Données de la question
@@ -14,11 +20,15 @@ class Question {
 
     }
 
+
+
     /**
      * Retourne la lettre correspondant à un index (A, B, C, D…).
      * @param {number} index
      * @returns {string}
      */
+
+
     lettreA(index) {
     }
 }

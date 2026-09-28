@@ -3,8 +3,14 @@
 // =============================================================================
 
 import {
-    TEMPLATE_BIENVENUE
+    TEMPLATE_BIENVENUE,
+    TEMPLATE_OPTION,
+    TEMPLATE_BADGE_JOUEUR,
+    TEMPLATE_QUIZ,
+    TEMPLATE_JOUEUR_RESULTAT,
+    TEMPLATE_RESULTAT
 } from "../VuesDynamiques.js";
+//#TODO handleRecommancer n est connecter sur rien trouver ou faire dans le pdf
 import {handleDemarrer, handleQuestionSuivante, handleRecommancer} from "../evenements.js";
 
 /**

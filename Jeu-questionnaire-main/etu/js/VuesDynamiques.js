@@ -26,9 +26,24 @@ export const TEMPLATE_OPTION = (classes, index, lettre, option) => `
 `;
 
 // Compléter TEMPLATE_BADGE_JOUEUR
+//#TODO remplir l inteireur et se renquerir sur se a quoi cela sert? , poser question / se frapper la tete contre un mur
+export const TEMPLATE_BADGE_JOUEUR = (                                              )=> `
 
 
+
+`;
 // Compléter TEMPLATE_QUIZ
+//#TODO vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+export const TEMPLATE_QUIZ = (                                              )=> `
+
+
+
+`;
+
+
+//#TODO ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 
 
 export const TEMPLATE_JOUEUR_RESULTAT = (nom, score, estGagnant, htmlIcones = '') => `

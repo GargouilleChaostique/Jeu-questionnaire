@@ -21,8 +21,17 @@ export function handleDemarrer(ev, vue) {
     }
 }
 
+
+
+// j assume que c est les choix de reponse
 export function handleChoixDeReponse(ev, quiz) {
 // A COMPLÉTER
+    // #TODO
+
+
+
+
+
 }
 
 export function handleQuestionSuivante(ev, quiz) {
