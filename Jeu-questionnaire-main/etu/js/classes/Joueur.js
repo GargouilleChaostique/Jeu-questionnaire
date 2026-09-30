@@ -5,9 +5,17 @@
 class Joueur {
      constructor() {
       //   this.payerAroB = false ; // est-ce ton tour # NE SERAIS PAS NECESAIRE
-         this.nomJoueur = ""; // ton nom recoit un parametre en chaine de charatere  #TODO Dois etre > get <
-         this.scoreJoueur = 0; // tes points  #TODO Dois etre > get <
+         this.#nomsJoueurs = ""; // ton nom recoit un parametre en chaine de charatere  #TODO Dois etre > get <
+         this.#scoreJoueur = 0; // tes points  #TODO Dois etre > get <
      }
+
+
+     get nomJoueur(){
+         return this.#nomJoueur;
+     }
+    get scoreJoueur(){
+        return this.#scoreJoueur;
+    }
 
 
 

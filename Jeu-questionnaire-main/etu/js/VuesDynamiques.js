@@ -27,14 +27,37 @@ export const TEMPLATE_OPTION = (classes, index, lettre, option) => `
 
 // Compléter TEMPLATE_BADGE_JOUEUR
 //#TODO remplir l inteireur et se renquerir sur se a quoi cela sert? , poser question / se frapper la tete contre un mur
-export const TEMPLATE_BADGE_JOUEUR = (                                              )=> `
+export const TEMPLATE_BADGE_JOUEUR = ( )=> `
 
+//#TODO modifier cela ce n est pas correct
+ <h1>TEMPLATE_BADGE_JOUEUR</h1>
+    <p class="subtitle">TEMPLATE_BADGE_JOUEUR</p>
 
+    <div class="result-container">
+        <div class="result-message">${A & B}</div>
+        <div class="result-score">
+            ${htmlJoueurs}
+        </div>
+        <button class="btn btn-restart" id="restartBtn">🔄 Nouvelle partie</button>
+    </div>
 
 `;
 // Compléter TEMPLATE_QUIZ
 //#TODO vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 export const TEMPLATE_QUIZ = (                                              )=> `
+
+
+//#TODO modifier cela ce n est pas correct
+ <h1>TEMPLATE_QUIZ</h1>
+    <p class="subtitle">TEMPLATE_QUIZ</p>
+
+    <div class="result-container">
+        <div class="result-message">${A & B}</div>
+        <div class="result-score">
+            ${htmlJoueurs}
+        </div>
+        <button class="btn btn-restart" id="restartBtn">🔄 Nouvelle partie</button>
+    </div>
 
 
 

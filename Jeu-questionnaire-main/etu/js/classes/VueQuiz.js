@@ -61,6 +61,8 @@ export class VueQuiz {
     }
 
     // ---------- Écran d'accueil ----------
+
+    //#TODO a modifier pour montrer des choses ... je pense?
     #afficheBienvenue() {
         this.#conteneur.innerHTML = TEMPLATE_BIENVENUE;
         document.getElementById('startBtn').addEventListener('click', (ev) => {
@@ -91,6 +93,9 @@ export class VueQuiz {
 
     // ---------- Écran de résultat ----------
     #afficheResultat() {
+
+        // faire une fonction qui affiche le resultat , je guess que je dois faire appel a Joueur
+        Joueur.scoreJoueur
 
 
     }
