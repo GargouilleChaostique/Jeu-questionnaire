@@ -133,7 +133,9 @@ export class Quiz {
      * @param {number} indexSelectionne
      */
     repondre(indexSelectionne) {
-
+        alert("repondre a été clicker")
+        // j ai peut etre inverser true et false #TODO
+        this.#estRepondu = false;
     }
 
     /**
@@ -142,8 +144,9 @@ export class Quiz {
      */
     suivant() {
 
+        alert("suivant a été clicker")
      // no way c est ca ==>   this.questionActuelle = next.questions();
-
+    this.#estRepondu = true;
     }
 
     /**

@@ -40,12 +40,12 @@ class Joueur {
 
 // ajouteur de point a joueur ...???? c est pas juste un get++ ???? #TODO chercher le piege
     ajouterPoint() {
-        this.scoreJoueur++;
+        this.#scoreJoueur++;
     }
 
 // cela ne peu pas etre aussi facile que ca??? #TODO chercher le piege
     reinitialiser() {
-        this.scoreJoueur = 0;
+        this.#scoreJoueur = 0;
     }
 
 }
