@@ -1,3 +1,5 @@
+import {questionsData} from "./donnees";
+
 export const TEMPLATE_BIENVENUE = `
     <div class="welcome-screen">
         <h1>🧠 Quiz à deux</h1>
@@ -33,9 +35,9 @@ export const TEMPLATE_BADGE_JOUEUR = ( )=> `
  <h1>TEMPLATE_BADGE_JOUEUR</h1>
     <p class="subtitle">TEMPLATE_BADGE_JOUEUR</p>
 
-    <div class="result-container">
-        <div class="result-message">${A & B}</div>
-        <div class="result-score">
+    <div class="player-badge"    >
+        <div class="player-input-box">${A & B}</div>
+        <div class="score">
             ${htmlJoueurs}
         </div>
         <button class="btn btn-restart" id="restartBtn">🔄 Nouvelle partie</button>
@@ -49,15 +51,27 @@ export const TEMPLATE_QUIZ = (                                              )=> 
 
 //#TODO modifier cela ce n est pas correct
  <h1>TEMPLATE_QUIZ</h1>
-    <p class="subtitle">TEMPLATE_QUIZ</p>
+    <p class="question-text">TEMPLATE_QUIZ</p>
 
-    <div class="result-container">
+    <div class="question-text"> 
+    <p class="jaune-couleur-texte-TODO?">A (${questionsData}) </p>
+    </div>
+        <div class="question-text"> 
+    <p class="jaune-couleur-texte-TODO?">B (${questionsData}) </p>
+    </div>
+        <div class="question-text"> 
+    <p class="jaune-couleur-texte-TODO?">C (${questionsData}) </p>
+    </div>
+        <div class="question-text"> 
+    <p class="jaune-couleur-texte-TODO?">D (${questionsData}) </p>
+    </div>
+    
         <div class="result-message">${A & B}</div>
         <div class="result-score">
             ${htmlJoueurs}
         </div>
         <button class="btn btn-restart" id="restartBtn">🔄 Nouvelle partie</button>
-    </div>
+    
 
 
 
