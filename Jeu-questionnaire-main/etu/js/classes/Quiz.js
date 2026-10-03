@@ -144,9 +144,21 @@ export class Quiz {
      */
     suivant() {
 
-        alert("suivant a été clicker")
-     // no way c est ca ==>   this.questionActuelle = next.questions();
-    this.#estRepondu = true;
+        //alert("suivant a été clicker")
+        // no way c est ca ==>   this.questionActuelle = next.questions();
+
+        if (this.#indexQuestionActuelle >= this.#questionsAVenir.length - 1) {
+            this.#estTermine = true;
+        } else {
+            this.#indexQuestionActuelle++;
+            this.#indexJoueurActuel = 1 - this.#indexJoueurActuel;
+            this.#estRepondu = false;
+        }
+
+
+        //ca va etre ca pour l instant
+        this.#estRepondu = true;
+        this.#rafraichirAffichage();
     }
 
     /**

@@ -118,7 +118,7 @@ export class VueQuiz {
         //juste un event listener sufisant ???
         this.#conteneur.querySelector('#nextBtn')?.addEventListener('click', (ev) => {
             handleQuestionSuivante(ev, quiz);
-            this.#afficheQuiz();
+            //this.#afficheQuiz();
         });
 
         //OUFFF
