@@ -135,7 +135,12 @@ export class Quiz {
     repondre(indexSelectionne) {
         alert("repondre a été clicker")
         // j ai peut etre inverser true et false #TODO
-        this.#estRepondu = false;
+      //  this.#estRepondu = false; apparemewnt non
+        if (this.#estRepondu) return;
+
+        this.#reponsesChoisies[this.#indexQuestionActuelle] = indexSelectionne;
+        this.#estRepondu = true;
+        this.#rafraichirAffichage();
     }
 
     /**

@@ -111,7 +111,7 @@ export class VueQuiz {
         // #TODO besoin d un affichage TODO
 // je ne sais pas trop demander de l aide a comprendre par moi meme plus tard...
         const htmlBadge = quiz.joueurs.map((joueurs, index) =>
-            TEMPLATE_BADGE_JOUEUR(joueurs.nomsJoueurs, joueurs.scoreJoueur, quiz.indexJoueurActuel)).join('');
+            TEMPLATE_BADGE_JOUEUR(joueurs.nomsJoueurs, joueurs.scoreJoueur,index= quiz.indexJoueurActuel ? 'estActif' : '')).join('');
         // trouver que fait Html OPTION
         this.#conteneur.innerHTML = TEMPLATE_QUIZ(htmlBadge, this.nomsJoueurs, q.scoreJoueur, htmlOptions, q.question);
 

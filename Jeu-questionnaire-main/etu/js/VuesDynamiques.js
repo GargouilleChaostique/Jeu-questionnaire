@@ -36,14 +36,11 @@ export const TEMPLATE_OPTION = (classes, index, lettre, option) => `
 //#TODO remplir l inteireur et se renquerir sur se a quoi cela sert? , poser question / se frapper la tete contre un mur
 
 // cette classe selon les indice donné utilise :player-badge, active, name, score, indicator
-export const TEMPLATE_BADGE_JOUEUR = (nom,score,estActif )=> `
-<div class="player-badge ${estActif ? 'active' : ''}">  
-<div class="nom">
-<div class="score">
-<div class="estActif">
-</div>
-
-
+export const TEMPLATE_BADGE_JOUEUR = (nom, score, estActif) => `
+  <div class="player-badge ${estActif ? 'active' : ''}">
+    <div class="nom">${nom}</div>
+    <div class="score">${score}</div>
+  </div>
 `;
 
 
