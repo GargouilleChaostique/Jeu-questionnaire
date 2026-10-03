@@ -22,7 +22,7 @@ export class Question {
 
         this.#enonce  = question;
         // c est un tableau???????????, ben oui je suis stupide
-        this.#options = [options];
+        this.#options = options;
         this.#indexCorrect = correct;
 
     }
@@ -32,8 +32,8 @@ export class Question {
         return this.#enonce ;
     }
 //pourquoi ne se fait pas appeler :|
-    get option() {
-        return [this.#options];
+    get options() {
+        return  this.#options;
     }
 
     // ben coup donc se fait deja appeler...

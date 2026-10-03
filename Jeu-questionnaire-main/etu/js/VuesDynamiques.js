@@ -36,16 +36,27 @@ export const TEMPLATE_OPTION = (classes, index, lettre, option) => `
 //#TODO remplir l inteireur et se renquerir sur se a quoi cela sert? , poser question / se frapper la tete contre un mur
 
 // cette classe selon les indice donné utilise :player-badge, active, name, score, indicator
-export const TEMPLATE_BADGE_JOUEUR = ( )=> `
+export const TEMPLATE_BADGE_JOUEUR = (nom,score,estActif )=> `
+<div class="player-badge ${estActif ? 'active' : ''}">  
+<div class="nom">
+<div class="score">
+<div class="estActif">
+</div>
 
+
+`;
+
+
+
+/*
 //#TODO modifier cela ce n est pas correct
  <h1>TEMPLATE_BADGE_JOUEUR</h1>
- 
- 
+
+
  <p class="name">${nom}</p>
- 
- 
- 
+
+
+
    <p> ceci est un test de TEMPLATE_BADGE_JOUEUR</p>
     <p class="subtitle">TEMPLATE_BADGE_JOUEUR</p>
 
@@ -57,8 +68,21 @@ export const TEMPLATE_BADGE_JOUEUR = ( )=> `
         </div>
         <button class="btn btn-restart" id="restartBtn">🔄 Nouvelle partie</button>
     </div>
+    */
 
-`;
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Compléter TEMPLATE_QUIZ
 //#TODO vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // avec les indice donné Template_quiz dois utiliser : subtitle, player-status, question-text,

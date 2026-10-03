@@ -67,6 +67,7 @@ export class VueQuiz {
 
     //#TODO a modifier pour montrer des choses ... je pense?
     #afficheBienvenue() {
+
         this.#conteneur.innerHTML = TEMPLATE_BIENVENUE;
         document.getElementById('startBtn').addEventListener('click', (ev) => {
             handleDemarrer(ev, this)
@@ -92,7 +93,13 @@ export class VueQuiz {
         const estRepondu = quiz.estRepondu;
         const reponseChoisie = quiz.reponseChoisie;
 
-
+        if(q === false){
+            alert("no question 97")
+        }
+        if(q.options === false){
+            alert("ne va pas dans la question? 100")
+        }
+        //apparement je me suis gourer quelque part la dedans?
         let htmlOptions = '';
         for (let i = 0; i < q.options.length; i++) {
             const option = q.options[i];
@@ -103,14 +110,15 @@ export class VueQuiz {
 
         // #TODO besoin d un affichage TODO
 // je ne sais pas trop demander de l aide a comprendre par moi meme plus tard...
-        const htmlBadge = quiz.joueurs.map((joueurs,index) =>
-            TEMPLATE_BADGE_JOUEUR(joueurs.nomsJoueurs, joueurs.scoreJoueur, quiz.indexJoueurActuel )).join('');
+        const htmlBadge = quiz.joueurs.map((joueurs, index) =>
+            TEMPLATE_BADGE_JOUEUR(joueurs.nomsJoueurs, joueurs.scoreJoueur, quiz.indexJoueurActuel)).join('');
         // trouver que fait Html OPTION
-        this.#conteneur.innerHTML = TEMPLATE_QUIZ(htmlBadge,this.nomsJoueurs,q.scoreJoueur,htmlOptions,q.questionActuelle);
+        this.#conteneur.innerHTML = TEMPLATE_QUIZ(htmlBadge, this.nomsJoueurs, q.scoreJoueur, htmlOptions, q.questionActuelle);
 
 
-this.#conteneur.querySelector('#nextBtn')?.addEventListener('click',(ev) => {handleQuestionSuivante(ev,quiz)})
-
+        this.#conteneur.querySelector('#nextBtn')?.addEventListener('click', (ev) => {
+            handleQuestionSuivante(ev, quiz)
+        })
 
 
         document.getElementById('nextBtn').addEventListener('click',
