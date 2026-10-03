@@ -40,6 +40,7 @@ export const TEMPLATE_BADGE_JOUEUR = (nom, score, estActif) => `
   <div class="player-badge ${estActif ? 'active' : ''}">
     <div class="nom">${nom}</div>
     <div class="score">${score}</div>
+      <div class="indicator">${estActif ? 'À votre tour' : ''}</div>
   </div>
 `;
 
@@ -90,21 +91,23 @@ export const TEMPLATE_QUIZ = (    htmlJoueurs,nom,score,htmlOption,htmlQuestion 
 
 
 
-//#TODO modifier cela ce n est pas correct
- <h1>TEMPLATE_QUIZ</h1>
- 
-    <p class="question-text">TEMPLATE_QUIZ</p>
-    
-<p> ceci est un test de TEMPLATE_QUIZ</p>
 
-    <div class="question-text"> 
-    
+ <h1>🧠 QUIZ </h1>
+ 
+   <br> <p>tour par tour</p>
+
+ 
     
      <p class="subtitle">${nom}</p>
-    <div class="players-status" >${htmlQuestion}</div>
+     
+    <div class="players-status">${htmlJoueurs}</div>
+    
     <div class="question-text" >${htmlQuestion}</div>
+    
     <div class="options-grid"> ${htmlOption}</div>
+    
     <div class="nav-buttons">
+    
     <button id="nextBtn" class="btn btn-next" type="button">Suivant</button>
 </div>
     
