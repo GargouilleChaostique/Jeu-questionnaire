@@ -4,7 +4,7 @@ export const TEMPLATE_BIENVENUE = `
     <div class="welcome-screen">
         <h1>🧠 Quiz à deux</h1>
         <p class="subtitle">Entrez les noms des deux joueurs</p>
-
+        <p> ceci est un test de TEMPLATE_BIENVENUE</p>
         <div class="player-input-group">
             <div class="player-input-box">
                 <label for="player1">Joueur 1</label>
@@ -25,7 +25,11 @@ export const TEMPLATE_OPTION = (classes, index, lettre, option) => `
     <div class="${classes}" data-index="${index}">
         <span class="letter">${lettre}</span>
         ${option}
+         
+         
+         <p> ceci est un test de template option</p>
     </div>
+   
 `;
 
 // Compléter TEMPLATE_BADGE_JOUEUR
@@ -42,7 +46,7 @@ export const TEMPLATE_BADGE_JOUEUR = ( )=> `
  
  
  
- 
+   <p> ceci est un test de TEMPLATE_BADGE_JOUEUR</p>
     <p class="subtitle">TEMPLATE_BADGE_JOUEUR</p>
 
 
@@ -68,7 +72,7 @@ export const TEMPLATE_QUIZ = (    htmlJoueurs,nom,score,htmlOption,htmlQuestion 
 //#TODO modifier cela ce n est pas correct
  <h1>TEMPLATE_QUIZ</h1>
     <p class="question-text">TEMPLATE_QUIZ</p>
-
+<p> ceci est un test de TEMPLATE_QUIZ</p>
     <div class="question-text"> 
     <p class="jaune-couleur-texte-TODO?">A (${questionsData}) </p>
     </div>
@@ -103,6 +107,7 @@ export const TEMPLATE_JOUEUR_RESULTAT = (nom, score, estGagnant, htmlIcones = ''
     <div class="result-player ${estGagnant ? 'winner' : ''}">
         <div class="name">${nom}</div>
         <div class="score">${score}</div>
+           <p> ceci est un test de TEMPLATE_JOUEUR_RESULTAT</p>
     </div>
 `;
 
@@ -113,6 +118,7 @@ export const TEMPLATE_RESULTAT = (htmlJoueurs, messageGagnant ) => `
     <div class="result-container">
         <div class="result-message">${messageGagnant}</div>
         <div class="result-score">
+             <p> ceci est un test de TEMPLATE_RESULTAT</p>
             ${htmlJoueurs}
         </div>
         <button class="btn btn-restart" id="restartBtn">🔄 Nouvelle partie</button>

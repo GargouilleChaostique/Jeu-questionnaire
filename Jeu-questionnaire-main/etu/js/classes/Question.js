@@ -1,14 +1,15 @@
-
-
 /**
  * Classe Question
  * Représente une question de quiz avec ses options et la bonne réponse.
  */
 
 
+class Question {
+ // sert a se que cela ne derange plus avec mes point d arret
+    #question;
+    #options;
+    #correct;
 
-
- class Question {
 
     /**
      * @param {Object} data - Données de la question
@@ -18,21 +19,24 @@
      */
     constructor({question, options, correct}) {
 
-     this.#question = question;
-       this.#options = options;
-       this.#correct = correct;
+
+        this.#question = question;
+        this.#options = options;
+        this.#correct = correct;
 
     }
 
 // j assume qu il faut des getteur
-    get question(){
+    get question() {
         return this.#question;
     }
-    get option(){
+
+    get option() {
         return this.#options;
     }
+
     // ben coup donc se fait deja appeler...
-    get correct(){
+    get correct() {
         return this.#correct;
     }
 
@@ -44,8 +48,9 @@
 
     lettreA(index) {
 // pourquoi j ai ca la??????????????????? #TODO comprendre wtf c est quoi cela
-    return 'A';
+        return 'A';
     }
+
 // #TODO j ose assumer qu il y a b, c ,d   ?????????????
     lettreB(index) {
 // pourquoi j ai ca la??????????????????? #TODO comprendre wtf c est quoi cela

@@ -12,6 +12,7 @@ import {
 } from "../VuesDynamiques.js";
 //#TODO handleRecommancer n est connecter sur rien trouver ou faire dans le pdf
 import {handleDemarrer, handleQuestionSuivante, handleRecommancer} from "../evenements.js";
+import {questionsData} from "../donnees";
 
 /**
  * Classe VueQuiz
@@ -83,12 +84,32 @@ export class VueQuiz {
     // ---------- Écran de quiz ----------
     #afficheQuiz() {
 
+        // fait des constante pour la panoplie d affaire pas referencer
+        const quiz = this.#quiz;
+        const q = quiz.questionActuelle;
+        const estRepondu = quiz.estRepondu;
+        const reponseChoisie = quiz.reponseChoisie;
+
+
         let htmlOptions = '';
         for (let i = 0; i < q.options.length; i++) {
             const option = q.options[i];
             const classes = this.#determinerClasseAppropriee(i, q, estRepondu, reponseChoisie);
             htmlOptions += '' + TEMPLATE_OPTION(classes, i, q.lettreA(i), option);
         }
+
+
+        // #TODO besoin d un affichage TODO
+// je ne sais pas trop demander de l aide a comprendre par moi meme plus tard...
+        const htmlBadge = quiz.joueurs.map((joueurs,index) =>
+            TEMPLATE_BADGE_JOUEUR(joueurs.nomsJoueurs, joueurs.scoreJoueur, quiz.indexJoueurActuel )).join('');
+        // trouver que fait Html OPTION
+        this.#conteneur.innerHTML = TEMPLATE_QUIZ(htmlBadge,this.nomsJoueurs,q.scoreJoueur,htmlOptions,q.questionActuelle);
+
+
+this.#conteneur.querySelector('#nextBtn')?.addEventListener('click',(ev) => {handleQuestionSuivante(ev,quiz)})
+
+
 
         document.getElementById('nextBtn').addEventListener('click',
             (ev) => {
