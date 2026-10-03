@@ -113,7 +113,7 @@ export class VueQuiz {
         const htmlBadge = quiz.joueurs.map((joueurs, index) =>
             TEMPLATE_BADGE_JOUEUR(joueurs.nomsJoueurs, joueurs.scoreJoueur, quiz.indexJoueurActuel)).join('');
         // trouver que fait Html OPTION
-        this.#conteneur.innerHTML = TEMPLATE_QUIZ(htmlBadge, this.nomsJoueurs, q.scoreJoueur, htmlOptions, q.questionActuelle);
+        this.#conteneur.innerHTML = TEMPLATE_QUIZ(htmlBadge, this.nomsJoueurs, q.scoreJoueur, htmlOptions, q.question);
 
 
         this.#conteneur.querySelector('#nextBtn')?.addEventListener('click', (ev) => {

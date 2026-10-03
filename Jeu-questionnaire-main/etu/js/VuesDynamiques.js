@@ -95,9 +95,19 @@ export const TEMPLATE_QUIZ = (    htmlJoueurs,nom,score,htmlOption,htmlQuestion 
 
 //#TODO modifier cela ce n est pas correct
  <h1>TEMPLATE_QUIZ</h1>
+ 
     <p class="question-text">TEMPLATE_QUIZ</p>
+    
 <p> ceci est un test de TEMPLATE_QUIZ</p>
+
     <div class="question-text"> 
+    
+    
+     <p class="subtitle">${nom}</p>
+    <div class="players-status" >${htmlQuestion}</div>
+    <div class="question-text" >${htmlQuestion}</div>
+    <div class="options-grid"> ${htmlOption}</div>
+    
     <p class="jaune-couleur-texte-TODO?">A (${questionsData}) </p>
     </div>
         <div class="question-text"> 
