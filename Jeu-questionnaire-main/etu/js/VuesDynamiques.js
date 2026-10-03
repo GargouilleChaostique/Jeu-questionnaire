@@ -1,4 +1,4 @@
-// apparement inutile ?? >>>   import {questionsData} from "./donnees";
+// apparement inutile ?? >>>import { questionsData } from "./donnees";
 
 export const TEMPLATE_BIENVENUE = `
     <div class="welcome-screen">

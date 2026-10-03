@@ -4,7 +4,7 @@
  */
 
 
-class Question {
+export class Question {
  // sert a se que cela ne derange plus avec mes point d arret
     #enonce ;
     #options;

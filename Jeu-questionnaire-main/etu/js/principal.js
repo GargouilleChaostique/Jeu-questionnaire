@@ -1,8 +1,9 @@
-import {questionsData} from './donnees.js';
+
 import {Quiz} from './classes/Quiz.js';
 import {VueQuiz} from './classes/VueQuiz.js';
 // le tabarnak manquais un .js !!!!!!!!
 import {Question} from './classes/Question.js';
+import {questionsData} from "./donnees.js";
 // !IMPORTANT! NE RIEN FAIRE DEDANS !IMPORTANT!
 
 // --------------------------------------------------------------

@@ -12,7 +12,9 @@ import {
 } from "../VuesDynamiques.js";
 //#TODO handleRecommancer n est connecter sur rien trouver ou faire dans le pdf
 import {handleDemarrer, handleQuestionSuivante, handleRecommancer} from "../evenements.js";
-import {questionsData} from "../donnees";
+
+//apparement fait boguer toute mes affaire je la met en commentaire VVVVVV
+//import {questionsData} from "../donnees";
 
 /**
  * Classe VueQuiz
