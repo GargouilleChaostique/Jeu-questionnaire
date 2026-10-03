@@ -6,9 +6,9 @@
 
 class Question {
  // sert a se que cela ne derange plus avec mes point d arret
-    #question;
+    #enonce ;
     #options;
-    #correct;
+    #indexCorrect;
 
 
     /**
@@ -20,24 +20,27 @@ class Question {
     constructor({question, options, correct}) {
 
 
-        this.#question = question;
-        this.#options = options;
-        this.#correct = correct;
+        this.#enonce  = question;
+        // c est un tableau???????????, ben oui je suis stupide
+        this.#options = [options];
+        this.#indexCorrect = correct;
 
     }
 
 // j assume qu il faut des getteur
     get question() {
-        return this.#question;
+        return this.#enonce ;
     }
-
+//pourquoi ne se fait pas appeler :|
     get option() {
-        return this.#options;
+        return [this.#options];
     }
 
     // ben coup donc se fait deja appeler...
     get correct() {
-        return this.#correct;
+       // return this.#indexCorrect;
+        // jassume ici #TODO retirer du code si non besoin
+        return indexDuTableau === this.#indexCorrect;
     }
 
     /**
@@ -45,12 +48,12 @@ class Question {
      * @param {number} index
      * @returns {string}
      */
-
+// ont m informe que je suis pas obiger de le faire pour chaque lettre YOUPI!!!
     lettreA(index) {
 // pourquoi j ai ca la??????????????????? #TODO comprendre wtf c est quoi cela
-        return 'A';
+        return String.fromCharCode(65+ index);
     }
-
+/*
 // #TODO j ose assumer qu il y a b, c ,d   ?????????????
     lettreB(index) {
 // pourquoi j ai ca la??????????????????? #TODO comprendre wtf c est quoi cela
@@ -66,4 +69,6 @@ class Question {
 // pourquoi j ai ca la??????????????????? #TODO comprendre wtf c est quoi cela
         return 'D';
     }
+    */
+
 }
