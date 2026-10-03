@@ -108,28 +108,34 @@ export const TEMPLATE_QUIZ = (    htmlJoueurs,nom,score,htmlOption,htmlQuestion 
     <div class="question-text" >${htmlQuestion}</div>
     <div class="options-grid"> ${htmlOption}</div>
     
-    <p class="jaune-couleur-texte-TODO?">A (${questionsData}) </p>
-    </div>
-        <div class="question-text"> 
-    <p class="jaune-couleur-texte-TODO?">B (${questionsData}) </p>
-    </div>
-        <div class="question-text"> 
-    <p class="jaune-couleur-texte-TODO?">C (${questionsData}) </p>
-    </div>
-        <div class="question-text"> 
-    <p class="jaune-couleur-texte-TODO?">D (${questionsData}) </p>
-    </div>
     
-        <div class="result-message">${A & B}</div>
-        <div class="result-score">
-            ${htmlJoueurs}
-        </div>
-        <button class="btn btn-restart" id="restartBtn">🔄 Nouvelle partie</button>
-    
-
 
 
 `;
+
+//peu reutiliser cela au besoin
+/*
+
+
+<p class="jaune-couleur-texte-TODO?">A (${questionsData}) </p>
+</div>
+    <div class="question-text">
+<p class="jaune-couleur-texte-TODO?">B (${questionsData}) </p>
+</div>
+    <div class="question-text">
+<p class="jaune-couleur-texte-TODO?">C (${questionsData}) </p>
+</div>
+    <div class="question-text">
+<p class="jaune-couleur-texte-TODO?">D (${questionsData}) </p>
+</div>
+
+    <div class="result-message">${A & B}</div>
+    <div class="result-score">
+        ${htmlJoueurs}
+    </div>
+    <button class="btn btn-restart" id="restartBtn">🔄 Nouvelle partie</button>
+
+*/
 
 
 //#TODO ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
