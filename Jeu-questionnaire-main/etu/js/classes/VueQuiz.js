@@ -83,6 +83,12 @@ export class VueQuiz {
     // ---------- Écran de quiz ----------
     #afficheQuiz() {
 
+        let htmlOptions = '';
+        for (let i = 0; i < q.options.length; i++) {
+            const option = q.options[i];
+            const classes = this.#determinerClasseAppropriee(i, q, estRepondu, reponseChoisie);
+            htmlOptions += '' + TEMPLATE_OPTION(classes, i, q.lettreA(i), option);
+        }
 
         document.getElementById('nextBtn').addEventListener('click',
             (ev) => {

@@ -1,4 +1,4 @@
-import {questionsData} from "./donnees";
+// apparement inutile ?? >>>   import {questionsData} from "./donnees";
 
 export const TEMPLATE_BIENVENUE = `
     <div class="welcome-screen">
@@ -20,6 +20,7 @@ export const TEMPLATE_BIENVENUE = `
     </div>
 `;
 
+// apparement il faut que j utilise HTMLElement dataset property?
 export const TEMPLATE_OPTION = (classes, index, lettre, option) => `
     <div class="${classes}" data-index="${index}">
         <span class="letter">${lettre}</span>
@@ -29,13 +30,23 @@ export const TEMPLATE_OPTION = (classes, index, lettre, option) => `
 
 // Compléter TEMPLATE_BADGE_JOUEUR
 //#TODO remplir l inteireur et se renquerir sur se a quoi cela sert? , poser question / se frapper la tete contre un mur
+
+// cette classe selon les indice donné utilise :player-badge, active, name, score, indicator
 export const TEMPLATE_BADGE_JOUEUR = ( )=> `
 
 //#TODO modifier cela ce n est pas correct
  <h1>TEMPLATE_BADGE_JOUEUR</h1>
+ 
+ 
+ <p class="name">${nom}</p>
+ 
+ 
+ 
+ 
     <p class="subtitle">TEMPLATE_BADGE_JOUEUR</p>
 
-    <div class="player-badge"    >
+
+    <div class="player-badge"  >
         <div class="player-input-box">${A & B}</div>
         <div class="score">
             ${htmlJoueurs}
@@ -46,7 +57,12 @@ export const TEMPLATE_BADGE_JOUEUR = ( )=> `
 `;
 // Compléter TEMPLATE_QUIZ
 //#TODO vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-export const TEMPLATE_QUIZ = (                                              )=> `
+// avec les indice donné Template_quiz dois utiliser : subtitle, player-status, question-text,
+// toujours avec les indices donne les choix de réponses utilisent les classes: options-grid,
+// La partie du bouton utilise les classes : nav-buttons, btn et btn-next
+export const TEMPLATE_QUIZ = (    htmlJoueurs,nom,score,htmlOption,htmlQuestion                                   )=> `
+
+
 
 
 //#TODO modifier cela ce n est pas correct
