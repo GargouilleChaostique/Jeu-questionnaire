@@ -94,22 +94,24 @@ export const TEMPLATE_QUIZ = (    htmlJoueurs,nom,score,htmlOption,htmlQuestion 
 
  <h1>🧠 QUIZ </h1>
  
-   <br> <p>tour par tour</p>
+   <br> 
+   <p>tour par tour</p>
+   
 
  
     
-     <p class="subtitle">${nom}</p>
+    <p class="subtitle">${nom}</p>
      
-    <div class="players-status">${htmlJoueurs}</div>
+    <div class="players-status">${htmlJoueurs}${nom}</div>
     
     <div class="question-text" >${htmlQuestion}</div>
     
     <div class="options-grid"> ${htmlOption}</div>
     
-    <div class="nav-buttons">
+      <div class="nav-buttons">
     
-    <button id="nextBtn" class="btn btn-next" type="button">Suivant</button>
-</div>
+        <button id="nextBtn" class="btn btn-next" type="button">Suivant</button>
+      </div>
     
 
 
