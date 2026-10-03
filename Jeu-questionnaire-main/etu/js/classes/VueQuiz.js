@@ -11,7 +11,7 @@ import {
     TEMPLATE_RESULTAT
 } from "../VuesDynamiques.js";
 //#TODO handleRecommancer n est connecter sur rien trouver ou faire dans le pdf
-import {handleDemarrer, handleQuestionSuivante, handleRecommancer} from "../evenements.js";
+import {handleDemarrer, handleChoixDeReponse, handleQuestionSuivante, handleRecommancer} from "../evenements.js";
 
 //apparement fait boguer toute mes affaire je la met en commentaire VVVVVV
 //import {questionsData} from "../donnees";
@@ -93,10 +93,10 @@ export class VueQuiz {
         const estRepondu = quiz.estRepondu;
         const reponseChoisie = quiz.reponseChoisie;
 
-        if(q === false){
+        if (!q) {
             alert("no question 97")
         }
-        if(q.options === false){
+        if (q.options === false) {
             alert("ne va pas dans la question? 100")
         }
         //apparement je me suis gourer quelque part la dedans?
@@ -115,18 +115,28 @@ export class VueQuiz {
         // trouver que fait Html OPTION
         this.#conteneur.innerHTML = TEMPLATE_QUIZ(htmlBadge, this.nomsJoueurs, q.scoreJoueur, htmlOptions, q.question);
 
-
+        //juste un event listener sufisant ???
         this.#conteneur.querySelector('#nextBtn')?.addEventListener('click', (ev) => {
-            handleQuestionSuivante(ev, quiz)
-        })
+            handleQuestionSuivante(ev, quiz);
+            this.#afficheQuiz();
+        });
 
+        //OUFFF
+        this.#conteneur.querySelectorAll('[data-index]').forEach((option) => {
+            option.addEventListener('click', (ev) => {
+                handleChoixDeReponse(ev, quiz)
+            });
+        });
 
-        document.getElementById('nextBtn').addEventListener('click',
-            (ev) => {
-                handleQuestionSuivante(ev, quiz)
-            }
-        );
     }
+
+    /*
+        document.getElementById('nextBtn').addEventListener('click',
+    (ev) => {
+        handleQuestionSuivante(ev, quiz)
+    }
+    );
+    */
 
     // ---------- Écran de résultat ----------
     #afficheResultat() {

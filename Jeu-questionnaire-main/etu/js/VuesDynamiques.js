@@ -107,7 +107,9 @@ export const TEMPLATE_QUIZ = (    htmlJoueurs,nom,score,htmlOption,htmlQuestion 
     <div class="players-status" >${htmlQuestion}</div>
     <div class="question-text" >${htmlQuestion}</div>
     <div class="options-grid"> ${htmlOption}</div>
-    
+    <div class="nav-buttons">
+    <button id="nextBtn" class="btn btn-next" type="button">Suivant</button>
+</div>
     
 
 

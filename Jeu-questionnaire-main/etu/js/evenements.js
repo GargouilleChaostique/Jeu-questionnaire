@@ -22,24 +22,20 @@ export function handleDemarrer(ev, vue) {
 }
 
 
-
 // j assume que c est les choix de reponse
 export function handleChoixDeReponse(ev, quiz) {
 // A COMPLÉTER
     // #TODO c est surement pas cela mais cela fait la job pour l instant
-/*
-
-    const boutonRepondre = ev.target;
-    if (!boutonRepondre.disabled) {
-        quiz.repondre();
-    }
-*/
+    /*
+        const boutonRepondre = ev.target;
+        if (!boutonRepondre.disabled) {
+            quiz.repondre();
+        }
+    */
 
 // apparement c est comme cela? vvv version prof
     const boutonOption = ev.target;
     const index = parseInt(boutonOption.dataset.index, 10);
-
-
 
 }
 
